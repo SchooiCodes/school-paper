@@ -1,0 +1,65 @@
+header {
+	text-align: center;
+    border-bottom: 4px double black;
+}
+
+h1 {
+	font-size: 3.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+article {
+    border-bottom: 2px solid black;
+    padding: 5px;
+    margin: 1%;
+}
+
+nav ul {
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+    list-style: none;
+}
+
+header h1 {
+    margin: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer {
+    margin: 40px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+}
+
+article h2 {
+    margin: 0px;
+}
+
+.lead h2 {
+    font-size: 40px;
+}
