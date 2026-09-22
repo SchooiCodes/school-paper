@@ -3,6 +3,25 @@ header {
     border-bottom: 4px double black;
 }
 
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+article h2 a {
+    text-decoration: none;
+    color: black
+}
+
+article h2 a:hover {
+    text-decoration: underline solid;
+}
+
+article a {
+    text-decoration: none;
+    color: #0063f9;
+}
+
 h1 {
 	font-size: 3.5rem;
 }
@@ -14,21 +33,27 @@ nav a {
     font-size:1.5rem;
 }
 
-nav a:hover {
-    color: blue;
-}
-
 article {
     border-bottom: 2px solid black;
     padding: 5px;
     margin: 1%;
 }
 
+nav ul li {
+	padding: 10px;
+	text-align: center;
+}
+
+nav ul li:hover {
+    background:#b2b4b7;
+}
+
 nav ul {
 	display: flex;
-	gap: 1.5rem;
 	justify-content: center;
     list-style: none;
+    margin: 0;
+    background: #d0d3d8;
 }
 
 header h1 {
