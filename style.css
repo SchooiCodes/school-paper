@@ -1,6 +1,73 @@
+/* =========================================================
+   BASE / GLOBAL
+   ========================================================= */
+
+body {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Times New Roman", Calibri, sans-serif;
+    line-height: 1.6; /* more space between lines of text = easier to read */
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT (main content area + sidebar grid)
+   ========================================================= */
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 1fr; /* main content column + sidebar column */
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.sologrid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    border-left: 2px solid #d0d3d8;
+    border-right: 2px solid #d0d3d8;
+    border-top: 2px solid #d0d3d8;
+    padding: 10px;
+    gap: 1rem;
+}
+
+.sologrid article {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.sologrid article:not(:first-child) {
+    border-left: 2px solid #d0d3d8;
+}
+
+/* Card grid used for article listings (e.g. homepage feed) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-left: 2px solid #d0d3d8;
+    border-right: 2px solid #d0d3d8;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
 header {
-	text-align: center;
+    text-align: center;
     border-bottom: 4px double black;
+}
+
+header h1 {
+    margin: 10px;
 }
 
 header a {
@@ -8,101 +75,111 @@ header a {
     color: black;
 }
 
-article h2 a {
-    text-decoration: none;
-    color: black
+.tagline {
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
-article h2 a:hover {
-    text-decoration: underline solid;
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    background: #d0d3d8;
 }
 
-article a {
-    text-decoration: none;
-    color: #0063f9;
+nav ul li {
+    padding: 10px;
+    text-align: center;
 }
 
-h1 {
-	font-size: 3.5rem;
+nav ul li:hover {
+    background: #b2b4b7;
 }
 
 nav a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
+
+
+/* =========================================================
+   ARTICLES
+   ========================================================= */
 
 article {
-    border-bottom: 2px solid black;
     padding: 5px;
-    margin: 1%;
 }
 
-nav ul li {
-	padding: 10px;
-	text-align: center;
-}
-
-nav ul li:hover {
-    background:#b2b4b7;
-}
-
-nav ul {
-	display: flex;
-	justify-content: center;
-    list-style: none;
-    margin: 0;
-    background: #d0d3d8;
-}
-
-header h1 {
-    margin: 10px;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-
-body {
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-footer {
-    margin: 40px;
-}
-
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 1.5rem;
+.back {
+    text-decoration: none;
+    color: #0063f9;
 }
 
 article h2 {
-    margin: 0px;
+    line-height: 0px;
+    text-align: center;
 }
 
+article h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+article h2 a:hover {
+    text-decoration: underline solid;
+}
+
+/* Article cards inside the .grid layout */
+.grid article {
+    background: white;
+    border-bottom: 2px solid #d0d3d8;
+    padding: 1rem;
+}
+
+/* "Lead" / featured article styling (larger heading + intro text) */
 .lead h2 {
     font-size: 2.5rem;
 }
 
-.grid article {
-    background: white;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    border-radius: 6px;
-    padding: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.2s;
+.info {
+    font-size: 1rem;
+    text-align: right;
+    color: grey
 }
 
-.grid article:hover { 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.info2 {
+    font-size: 0.9rem;
+    text-align: center;
+    color: grey
 }
 
-.lead p {
+.text {
     font-size: 1.5rem;
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    margin-top: auto; /* pushes footer to bottom when content is short (flex column on body) */
+    padding: 25px;
+    background: #d0d3d8;
+    word-spacing: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Consolas, sans-serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
 }
